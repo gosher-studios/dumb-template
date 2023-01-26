@@ -1,6 +1,4 @@
-Pandarose_ default tech stack
-
-RTP - React, Tailwind, Parcel
+# cry fart poop
 
 
 # How to Use
