@@ -1,31 +1,30 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import React, { useState, useEffect } from "react";
-import { createRoot } from "react-dom/client";
 import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Navigate,
-  useSearchParams,
+	BrowserRouter,
+	Routes,
+	Route,
 } from "react-router-dom";
-import {Home,NotFound} from "./pages/index.ts"
+import { Home, NotFound } from "./pages/index"
+import { createRoot } from "react-dom/client"
 const App = () => {
-  return (
-       <BrowserRouter>
-                  <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-              
-      </BrowserRouter>
-      );
+	return (
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="*" element={<NotFound />} />
+			</Routes>
+
+		</BrowserRouter>
+	);
 };
 
+let root = document.getElementById("root");
+if (root) {
+	createRoot(root).render(
+		<React.StrictMode>
+			<App />
+		</React.StrictMode>
+	)
+}
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+
